@@ -1,8 +1,8 @@
-const ADD_TODO = "ADD_TODO";
+const POST_TODO = "POST_TODO";
 
-let addCommentToQuestion = (questionComment) => {
+let postTodo = (todo) => {
   return {
-    type: ADD_TODO,
-    questionComment
+    type: POST_TODO,
+    todo
   }
 }

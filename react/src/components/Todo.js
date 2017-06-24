@@ -4,8 +4,12 @@ const Todo = props => {
   let todo = props.todo
 
   return(
-    <li className="todo">
-      <span className="title">{todo.title}</span>
+    <li
+      className="todo"
+      onClick={onClick}
+      style={{textDecoration: completed ? 'line-through' : 'none'}}
+    >
+      {todo.title}
     </li>
   );
 }

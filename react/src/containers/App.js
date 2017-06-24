@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import FormContainer from './FormContainer';
 import TodoList from '../components/TodoList';
+import { connect } from 'react-redux';
+
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      todos: this.props.todos
-    }
+
     this.trackTodo = this.trackTodo.bind(this);
   }
 
@@ -23,11 +23,18 @@ class App extends Component {
           <FormContainer trackTodo={this.trackTodo} />
         </div>
         <div>
-          <TodoList todos={this.state.todos} />
+          <TodoList todos={this.props.todos} />
         </div>
       </div>
     );
   }
 }
 
-export default App;
+let mapStateToProps(state) {
+  return {
+    todos: state.todos
+  };
+}
+
+
+export default connect(mapStateToProps)(App);
