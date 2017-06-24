@@ -12,6 +12,7 @@ gem 'jquery-rails'
 gem 'listen'
 gem 'haml-rails'
 gem 'devise'
+gem 'foundation-rails'
 
 group :development, :test do
   gem 'capybara'
