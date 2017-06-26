@@ -1,24 +1,25 @@
-const todo = (state, action) => {
+import { POST_TODO, CHANGE_TODO } from '../actions/postTodo';
+
+const todo = (state = "", action) => {
   switch (action.type) {
-    case 'POST_TODO':
-      return {
-        title: action.title,
-      };
+    case CHANGE_TODO:
+      return action.todo;
     default:
       return state;
   }
 };
 
+
 const todos = (state = [], action) => {
   switch (action.type) {
-    case 'POST_TODO':
+    case POST_TODO:
       return [
         ...state,
-        todo(undefined, action),
+        action.todo
       ];
     default:
       return state;
   }
 };
 
-export default todos;
+export { todo, todos };

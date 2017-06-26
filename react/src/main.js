@@ -1,10 +1,11 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
 
 import App from './containers/App'
+import { todo, todos } from './reducers/todos'
 
 // const todos = [
 //   { id: 1, title: "Gym", done: false},
@@ -12,7 +13,12 @@ import App from './containers/App'
 //   { id: 3, title: "Homework", done: true }
 // ];
 
-let store = createStore(todoApp)
+const store = createStore(
+  combineReducers({
+    todo,
+    todos
+  })
+)
 
 $(function() {
   ReactDOM.render(
