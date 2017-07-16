@@ -37,6 +37,7 @@ class FormContainer extends Component {
   }
 
   render() {
+    // <button className="button" onClick={this.handleClearForm}>Clear</button>
     return (
       <form className="callout" onSubmit={this.handleFormSubmit}>
         <TextField
@@ -46,7 +47,6 @@ class FormContainer extends Component {
           handlerFunction={this.handleTodoChange}
         />
         <div className="button-group">
-          <button className="button" onClick={this.handleClearForm}>Clear</button>
           <input className="button" type="submit" value="Submit" />
         </div>
       </form>

@@ -7,12 +7,6 @@ import { Provider } from 'react-redux'
 import App from './containers/App'
 import { todo, todos } from './reducers/todos'
 
-// const todos = [
-//   { id: 1, title: "Gym", done: false},
-//   { id: 2, title: "Foobar", done: false },
-//   { id: 3, title: "Homework", done: true }
-// ];
-
 const store = createStore(
   combineReducers({
     todo,
