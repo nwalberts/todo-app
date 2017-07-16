@@ -6,9 +6,7 @@ import { postTodo, changeTodo } from '../actions/postTodo';
 class FormContainer extends Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   newTodoTitle: '',
-    // }
+
     // this.handleClearForm = this.handleClearForm.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleTodoChange = this.handleTodoChange.bind(this);

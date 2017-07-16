@@ -1,12 +1,10 @@
 import React from 'react';
 
-const Todo = props => {
-  let todo = props.todo
-
-  // style={{textDecoration: completed ? 'line-through' : 'none'}}
+const Todo = ({todo, handleDeleteClick}) => {
+   // style={{textDecoration: completed ? 'line-through' : 'none'}}
   return(
     <li className="todo">
-      {todo.title}
+      {todo.title}  <button className="button" onClick={handleDeleteClick}> Delete </button>
     </li>
   );
 }

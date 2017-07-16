@@ -6,6 +6,7 @@ import { Provider } from 'react-redux'
 
 import App from './containers/App'
 import { todo, todos } from './reducers/todos'
+import { deleteTodo } from './reducers/deleteTodo'
 
 const store = createStore(
   combineReducers({

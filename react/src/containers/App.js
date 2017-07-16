@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FormContainer from './FormContainer';
-import TodoListContainer from '../components/TodoListContainer';
+import TodoListContainer from './TodoListContainer';
 
 import { connect } from 'react-redux';
 

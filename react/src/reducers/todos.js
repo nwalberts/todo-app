@@ -1,4 +1,5 @@
 import { POST_TODO, CHANGE_TODO } from '../actions/postTodo';
+import { DELETE_TODO } from '../actions/deleteTodo';
 
 const todo = (state = "", action) => {
   switch (action.type) {
@@ -9,7 +10,6 @@ const todo = (state = "", action) => {
   }
 };
 
-
 const todos = (state = [], action) => {
   switch (action.type) {
     case POST_TODO:
@@ -17,6 +17,8 @@ const todos = (state = [], action) => {
         ...state,
         action.todo
       ];
+    case DELETE_TODO:
+      return state.filter(todo => todo.title !== action.todoId);
     default:
       return state;
   }
