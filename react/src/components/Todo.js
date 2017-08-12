@@ -1,10 +1,18 @@
 import React from 'react';
 
 const Todo = ({todo, handleDeleteClick}) => {
-   // style={{textDecoration: completed ? 'line-through' : 'none'}}
+  let completed = todo.completed
   return(
-    <li className="todo">
-      {todo.title}  <button className="button" onClick={handleDeleteClick}> Delete </button>
+    <li
+      className="todo"
+      style={{
+        textDecoration: completed ? 'line-through' : 'none',
+      }}
+    >
+        {todo.title}
+      <button className="button" onClick={handleDeleteClick}>
+         Delete
+      </button>
     </li>
   );
 }

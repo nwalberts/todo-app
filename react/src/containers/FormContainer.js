@@ -22,10 +22,11 @@ class FormContainer extends Component {
   handleFormSubmit(event) {
     event.preventDefault();
     let formPayload = {
-      title: this.props.todoString
+      title: this.props.todoString,
+      completed: false
     };
 
-    this.props.dispatchPostTodo(formPayload);
+    this.props.postTodo(formPayload);
 
     // this.handleClearForm(event);
   }
@@ -61,7 +62,7 @@ let mapStateToProps = state => {
 
 let mapDispatchToProps = dispatch => {
   return {
-    dispatchPostTodo: (todo) => dispatch(postTodo(todo)),
+    postTodo: (todo) => dispatch(postTodo(todo)),
     changeTodo: (todoString) => dispatch(changeTodo(todoString))
   }
 }

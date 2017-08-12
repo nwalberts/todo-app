@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { deleteTodo } from '../actions/deleteTodo';
+import { toggleTodo } from '../actions/deleteTodo';
 
 import Todo from '../components/Todo'
 
@@ -37,7 +38,8 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = dispatch => {
   return {
-    deleteTodoHandler: (todoId) => dispatch(deleteTodo(todoId))
+    deleteTodoHandler: (todoId) => dispatch(deleteTodo(todoId)),
+    toggleTodoHandler: (todoId) => dispatch(toggleTodo(todoId))
   }
 }
 
